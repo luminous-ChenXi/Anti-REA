@@ -1,0 +1,37 @@
+{
+  "$comment": "Anti-REA rule plugin example. Drop it in your project root as anti-rea.config.json and audit loads it automatically. Contribute reusable rules back to the community.",
+  "rules": [
+    {
+      "id": "CUSTOM-INTERNAL-PREFIX",
+      "appliesTo": ["js", "any"],
+      "pattern": "MyCompanyInternalSecretPrefix_",
+      "severity": "high",
+      "title": "Company-internal string prefix detected",
+      "detail": "Internal string conventions help reverse engineers locate business modules fast",
+      "rea": "Semantic localization",
+      "fix": "Replace with a random prefix via a build plugin"
+    },
+    {
+      "id": "CUSTOM-BETA-FEATURE",
+      "appliesTo": ["js"],
+      "pattern": "__BETA_ENABLE_FLAG__",
+      "patternIsRegex": false,
+      "severity": "medium",
+      "title": "Unreleased beta feature flag",
+      "detail": "REA's LLM enumerates hidden features and infers entry points",
+      "rea": "Hidden feature discovery",
+      "fix": "Ship feature flags from config, never hardcode"
+    },
+    {
+      "id": "CUSTOM-DEBUG-LOG",
+      "appliesTo": ["js", "any"],
+      "pattern": "\\[DEBUG-LIC\\]",
+      "patternIsRegex": true,
+      "severity": "high",
+      "title": "License module debug-log marker",
+      "detail": "Debug-log strings are the fastest landmark to license logic",
+      "rea": "License logic localization",
+      "fix": "Strip this log channel from release builds"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "anti-rea",
+  "version": "0.1.0",
+  "description": "Anti-REA — anti reverse-engineering hardening toolkit: audit and neutralize the signals REA (Reverse Engineer Anything) and similar AI-agent RE pipelines rely on.",
+  "type": "module",
+  "bin": {
+    "anti-rea": "./bin/anti-rea.mjs"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "bin/",
+    "src/",
+    "guards/",
+    "skills/",
+    "configs/",
+    "docs/",
+    "examples/js-app/",
+    "examples/go-app/main.go",
+    "test/run-tests.mjs",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/run-tests.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "anti-reverse-engineering",
+    "anti-rea",
+    "software-protection",
+    "obfuscation",
+    "binary-hardening",
+    "anti-debugging",
+    "anti-tampering",
+    "mcp",
+    "model-context-protocol",
+    "electron",
+    "dotnet",
+    "android",
+    "agent-security",
+    "llm-security"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB/anti-rea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB/anti-rea/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB/anti-rea#readme"
+}

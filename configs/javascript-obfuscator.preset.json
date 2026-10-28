@@ -1,0 +1,21 @@
+{
+  "$comment": "Anti-REA recommended javascript-obfuscator preset, tuned against REA's babel AST analysis and LLM semantic recovery. Usage: npx javascript-obfuscator your-bundle.js --config anti-rea-obfuscator.config.json. Control-flow flattening costs 1.5-3x runtime — trade off per scenario.",
+  "compact": true,
+  "controlFlowFlattening": true,
+  "controlFlowFlatteningThreshold": 0.75,
+  "deadCodeInjection": true,
+  "deadCodeInjectionThreshold": 0.4,
+  "debugProtection": false,
+  "stringArray": true,
+  "stringArrayEncoding": ["rc4"],
+  "stringArrayThreshold": 1,
+  "stringArrayRotate": true,
+  "stringArrayShuffle": true,
+  "splitStrings": true,
+  "splitStringsChunkLength": 8,
+  "transformObjectKeys": true,
+  "unicodeEscapeSequence": false,
+  "renameGlobals": true,
+  "selfDefending": true,
+  "identifierNamesGenerator": "hexadecimal"
+}
